@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h1>Update Mahasiswa</h1>
+    
+    <br>
+    <form  method="post" >
+        {{form.nim.label}}
+        {{form.nim}} 
+        {{form.nama.label}}
+        {{form.nama}}
+        {{form.simpan}}
+    </form>
+{% endblock %}

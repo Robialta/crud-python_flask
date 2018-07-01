@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+aku adalah mahasiswa....<br>
+
+<form method="POST" action="{{url_for('mahasiswa')}}">
+    {{form.hidden_tag()}}
+    {{form.nim.label}}
+    {{form.nim(maxlength='5', autofocus="autofocus")}}
+    {%for error in form.nim.errors%}
+        <span style="color:red;">{{error}}</span>       
+    {%endfor%}
+    <br>
+    {{form.nama.label}}
+    {{form.nama}}
+    {%for error in form.nama.errors%}
+        <span style="color:red;">{{error}}</span>       
+    {%endfor%}
+    <br>
+    {{form.simpan}}
+</form>
+
+{% endblock %}

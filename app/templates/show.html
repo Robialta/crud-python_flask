@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<a class="btn btn-xs" href="{{url_for('mahasiswa')}}">Tambah +</a>
+<table border="1px" cellpadding="10px" width="500px" class="text-center">
+    {%for mahasiswa in mahasiswaAll%}
+        <tr>
+            <td>{{loop.index}}</td>
+            <td>{{mahasiswa.nim}}</td>
+            <td align="left">{{mahasiswa.nama}}</td>
+            <td><a class="btn btn-primary btn-xs" href="{{url_for('update',id=mahasiswa.id)}}">Update</a></td>
+            <td><a class="btn btn-danger btn-xs" href="{{url_for('delete',id=mahasiswa.id)}}">Delete</a></td>
+        </tr>
+    {%endfor%}
+</table>
+
+{% endblock %}
