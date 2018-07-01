@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-
+<h1>Data Mahasiswa</h1>
 <a class="btn btn-xs" href="{{url_for('mahasiswa')}}">Tambah +</a>
 <table border="1px" cellpadding="10px" width="500px" class="text-center">
     {%for mahasiswa in mahasiswaAll%}
